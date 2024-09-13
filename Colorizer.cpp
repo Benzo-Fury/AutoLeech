@@ -49,6 +49,10 @@ std::string Colorizer::green(const std::string& text) {
     return colorize(text, 0, 255, 0, ByCharacter);
 }
 
+std::string Colorizer::yellow(const std::string& text) {
+    return colorize(text, 255, 255, 0, ByCharacter);
+}
+
 std::string Colorizer::water(const std::string& text) {
     return colorize(text, 0, 10, 255, ByLine);
 }
