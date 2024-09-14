@@ -2,9 +2,9 @@
 #include <sstream>
 #include <string>
 
-#include "Logger.h"
+#include "classes/Logger.h"
 
-#include "Colorizer.h"
+#include "classes/Colorizer.h"
 
 std::string Logger::spaces = "                                                        ";
 
@@ -28,6 +28,14 @@ void Logger::success(const std::string& text) {
 
 void Logger::water(const std::string& text) {
     std::cout << Colorizer::water(text) << std::endl;
+}
+
+void Logger::debug(const std::string& text) {
+    #ifndef DEBUG:
+	    std::ostringstream oss;
+	    oss << "\n" << spaces << "[$] Debug : " << text;
+        std::cout << Colorizer::yellow(oss.str());
+    #endif
 }
 
 std::string Logger::prompt(const std::string& text) {

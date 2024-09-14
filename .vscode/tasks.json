@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-linux",
+      "type": "shell",
+      "command": "make",
+      "args": [
+        "all"  // Default target for Linux build
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compile Linux binary using Makefile"
+    },
+    {
+      "label": "build-windows",
+      "type": "shell",
+      "command": "make",
+      "args": [
+        "windows"  // Windows target defined in the Makefile
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compile Windows binary using Makefile"
+    },
+    {
+      "label": "clean",
+      "type": "shell",
+      "command": "make",
+      "args": [
+        "clean"  // Clean target to remove binaries and object files
+      ],
+      "group": {
+        "kind": "none",
+        "isDefault": false
+      },
+      "problemMatcher": [],
+      "detail": "Clean build files using Makefile"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+    "configurations": [
+      {
+        "name": "Linux",
+        "includePath": [
+          "${workspaceFolder}/include",  // Top-level include directory, searches recursively
+          "${workspaceFolder}/src",      // Include source directory if needed for IntelliSense
+          "/usr/include",                // Standard system includes
+          "/usr/local/include"           // Standard local includes
+        ],
+        "defines": [],
+        "compilerPath": "/usr/bin/g++",  // Linux compiler path
+        "cStandard": "c11",
+        "cppStandard": "c++20",          // C++20 for your project
+        "intelliSenseMode": "gcc-x64"
+      },
+      {
+        "name": "Windows",
+        "includePath": [
+          "${workspaceFolder}/include",   // Top-level include directory
+          "${workspaceFolder}/src",       // Include source directory if needed
+          "/usr/x86_64-w64-mingw32/include",  // MinGW include path for cross-compilation
+          "/usr/include",
+          "/usr/local/include"
+        ],
+        "defines": [],
+        "compilerPath": "/usr/bin/x86_64-w64-mingw32-g++",  // MinGW cross-compiler path
+        "cStandard": "c11",
+        "cppStandard": "c++20",          // C++20 for Windows cross-compilation
+        "intelliSenseMode": "gcc-x64"
+      }
+    ],
+    "version": 4
+  }
+  
